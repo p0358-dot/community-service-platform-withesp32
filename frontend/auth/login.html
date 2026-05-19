@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - 社区服务平台</title>
+    <link rel="stylesheet" href="./auth.css">
+</head>
+<body>
+    <section class="auth-card">
+        <h1 class="auth-title">账号登录</h1>
+        <p class="auth-subtitle">登录后进入控制端或用户端</p>
+        <form id="login-form" class="auth-form">
+            <label>账号</label>
+            <input id="username" type="text" placeholder="请输入用户名" required>
+            <label>密码</label>
+            <input id="password" type="password" placeholder="请输入密码" required>
+            <label>登录身份</label>
+            <select id="role">
+                <option value="user">用户端</option>
+                <option value="admin">控制端</option>
+            </select>
+            <button class="auth-btn" type="submit">登录</button>
+        </form>
+        <div class="auth-links">
+            <a href="/auth/register.html">没有账号？去注册</a>
+            <a href="/user/">返回用户首页</a>
+        </div>
+        <div id="auth-error" class="auth-error"></div>
+    </section>
+    <script src="./auth.js"></script>
+</body>
+</html>

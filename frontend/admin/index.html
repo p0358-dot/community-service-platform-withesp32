@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社区服务管理系统</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 侧边栏-->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="logo-text">
+                    <h2>管理系统</h2>
+                    <span>社区服务</span>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <div class="nav-section">
+                <h3 class="nav-title">核心管理</h3>
+                <ul class="nav-list">
+                    <li class="nav-item active" onclick="showDashboard()">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>总览</span>
+                    </li>
+                    <li class="nav-item" onclick="showVenueManagement()">
+                        <i class="fas fa-building"></i>
+                        <span>场地管理</span>
+                    </li>
+                    <li class="nav-item" onclick="showUserManagement()">
+                        <i class="fas fa-users"></i>
+                        <span>用户管理</span>
+                    </li>
+                    <li class="nav-item" onclick="showReservationManagement()">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>预约管理</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav-section">
+                <h3 class="nav-title">服务管理</h3>
+                <ul class="nav-list">
+                    <li class="nav-item" onclick="showRepairManagement()">
+                        <i class="fas fa-tools"></i>
+                        <span>报修管理</span>
+                        <span class="nav-badge">3</span>
+                    </li>
+                    <li class="nav-item" onclick="showNoticeManagement()">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>通知管理</span>
+                    </li>
+                    <li class="nav-item" onclick="showServiceManagement()">
+                        <i class="fas fa-concierge-bell"></i>
+                        <span>服务管理</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav-section">
+                <h3 class="nav-title">数据分析</h3>
+                <ul class="nav-list">
+                    <li class="nav-item" onclick="showStatistics()">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>数据统计</span>
+                    </li>
+                    <li class="nav-item" onclick="showAdminAIAssistant()">
+                        <i class="fas fa-robot"></i>
+                        <span>AI助手</span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <div class="system-status">
+                <div class="status-indicator">
+                    <i class="fas fa-circle"></i>
+                </div>
+                <div class="status-text">
+                    <span>系统状态</span>
+                    <small>运行正常</small>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 主内容区-->
+    <main class="main-content">
+        <!-- 顶部导航-->
+        <header class="top-header">
+            <div class="header-left">
+                <button class="sidebar-toggle" onclick="toggleSidebar()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="breadcrumb">
+                    <span class="breadcrumb-item">仪表盘</span>
+                </div>
+            </div>
+            
+            <div class="header-center">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="搜索服务、用户、设备..." class="search-input">
+                    <button class="search-btn">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <div class="header-menu notification-menu">
+                    <button class="notification-btn" onclick="toggleNotificationMenu(event)" aria-label="通知菜单">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">5</span>
+                    </button>
+                    <div class="menu-panel notification-panel" id="notification-panel">
+                        <div class="menu-panel-header">
+                            <span>最新通知</span>
+                            <button class="menu-link-btn" onclick="showNoticeManagement()">查看全部</button>
+                        </div>
+                        <div class="menu-panel-list">
+                            <button class="menu-panel-item" onclick="showRepairManagement()">
+                                <div>
+                                    <strong>待处理报修</strong>
+                                    <p>目前有 3 条工单等待处理</p>
+                                </div>
+                                <span class="menu-time">刚刚</span>
+                            </button>
+                            <button class="menu-panel-item" onclick="showReservationManagement()">
+                                <div>
+                                    <strong>今日预约</strong>
+                                    <p>有 7 条预约记录需确认</p>
+                                </div>
+                                <span class="menu-time">5 分钟前</span>
+                            </button>
+                            <button class="menu-panel-item" onclick="showStatistics()">
+                                <div>
+                                    <strong>数据概览更新</strong>
+                                    <p>最新统计已同步</p>
+                                </div>
+                                <span class="menu-time">10 分钟前</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-menu user-menu">
+                    <button class="user-profile" onclick="toggleUserMenu(event)" aria-label="用户菜单">
+                        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%234CAF50'/><text x='50' y='60' text-anchor='middle' fill='white' font-size='40'>管</text></svg>" alt="管理员" class="profile-avatar">
+                        <div class="profile-info">
+                            <span class="profile-name">管理员</span>
+                            <small class="profile-role">系统管理员</small>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="menu-panel user-panel" id="user-panel">
+                        <div class="menu-panel-header user-panel-header">
+                            <div>
+                                <strong class="profile-name menu-profile-name">管理员</strong>
+                                <p class="profile-role menu-profile-role">系统管理员</p>
+                            </div>
+                        </div>
+                        <div class="menu-panel-list">
+                            <button class="menu-panel-item" onclick="showDashboard()">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>返回仪表盘</span>
+                            </button>
+                            <button class="menu-panel-item" onclick="showAdminAIAssistant()">
+                                <i class="fas fa-robot"></i>
+                                <span>打开 AI 助手</span>
+                            </button>
+                            <button class="menu-panel-item danger-item" onclick="logoutAdmin()">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>退出登录</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 仪表盘内容-->
+        <div class="dashboard-content" id="dashboard-content">
+            <!-- 统计卡片 -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>6</h3>
+                        <p>注册用户</p>
+                        <span class="stat-change positive">+12%</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>5</h3>
+                        <p>可用场地</p>
+                        <span class="stat-change positive">+2</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>7</h3>
+                        <p>今日预约</p>
+                        <span class="stat-change positive">+25%</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>3</h3>
+                        <p>待处理报修</p>
+                        <span class="stat-change negative">需要关注</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 快速操作-->
+            <div class="quick-actions">
+                <h3>快速操作</h3>
+                <div class="actions-grid">
+                    <button class="action-btn" onclick="showVenueManagement()">
+                        <i class="fas fa-building"></i>
+                        <span>场地管理</span>
+                    </button>
+                    <button class="action-btn" onclick="showRepairManagement()">
+                        <i class="fas fa-tools"></i>
+                        <span>处理报修</span>
+                    </button>
+                    <button class="action-btn" onclick="showNoticeManagement()">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>发布通知</span>
+                    </button>
+                    <button class="action-btn" onclick="showUserManagement()">
+                        <i class="fas fa-user-plus"></i>
+                        <span>用户管理</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页面内容区域 -->
+        <div class="page-content" id="page-content" style="display: none;">
+            <!-- 这里会动态加载各个管理页面的内容 -->
+        </div>
+    </main>
+
+    <!-- 页面内容区域 -->
+    <div class="content-area" id="venue-management" style="display: none;"></div>
+    <div class="content-area" id="user-management" style="display: none;"></div>
+    <div class="content-area" id="reservation-management" style="display: none;"></div>
+    <div class="content-area" id="repair-management" style="display: none;"></div>
+    <div class="content-area" id="notice-management" style="display: none;"></div>
+    <div class="content-area" id="service-management" style="display: none;"></div>
+    <div class="content-area" id="statistics" style="display: none;"></div>
+    <div class="content-area" id="admin-ai-assistant" style="display: none;"></div>
+
+    <!-- 返回按钮 -->
+    <button class="back-button" onclick="showMainPage()" style="display: none;">
+        <i class="fas fa-arrow-left"></i> 返回主页
+    </button>
+
+    <!-- Toast 通知 -->
+    <div class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

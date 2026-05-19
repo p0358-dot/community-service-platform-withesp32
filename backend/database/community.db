@@ -1,0 +1,1059 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "name": "管理员",
+      "email": "admin@community.com",
+      "phone": "13800138000",
+      "created_at": "2025-10-02T17:23:25.061Z"
+    },
+    {
+      "id": 2,
+      "username": "user1",
+      "name": "张三",
+      "email": "user1@community.com",
+      "phone": "13800138001",
+      "created_at": "2025-10-02T17:23:25.061Z"
+    },
+    {
+      "id": 3,
+      "username": "user2",
+      "name": "李四",
+      "email": "user2@community.com",
+      "phone": "13800138002",
+      "created_at": "2025-10-02T17:23:25.061Z"
+    },
+    {
+      "id": 4,
+      "username": "user3",
+      "name": "王五",
+      "email": "user3@community.com",
+      "phone": "13800138003",
+      "created_at": "2025-10-02T17:23:25.061Z"
+    },
+    {
+      "id": 5,
+      "username": "user4",
+      "name": "赵六",
+      "email": "user4@community.com",
+      "phone": "13800138004",
+      "created_at": "2025-10-02T17:23:25.061Z"
+    },
+    {
+      "id": 6,
+      "username": "user5",
+      "name": "孙七",
+      "email": "user5@community.com",
+      "phone": "13800138005",
+      "created_at": "2025-10-02T17:23:25.061Z"
+    }
+  ],
+  "chatMessages": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "session_id": "default",
+      "role": "user",
+      "content": "我想预约乒乓球室",
+      "timestamp": "2024-01-10T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "好的，我来帮您预约乒乓球室。请问您希望什么时候使用呢？",
+      "timestamp": "2024-01-10T10:00:05.000Z"
+    },
+    {
+      "id": 3,
+      "user_id": 2,
+      "session_id": "default",
+      "role": "user",
+      "content": "明天下午2点到4点",
+      "timestamp": "2024-01-10T10:00:30.000Z"
+    },
+    {
+      "id": 4,
+      "user_id": 2,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "已为您成功预约乒乓球室，时间：2024-01-15 14:00-16:00。预约ID：1",
+      "timestamp": "2024-01-10T10:00:35.000Z"
+    },
+    {
+      "id": 5,
+      "user_id": 3,
+      "session_id": "session_2",
+      "role": "user",
+      "content": "健身房现在有人吗？",
+      "timestamp": "2024-01-11T15:30:00.000Z"
+    },
+    {
+      "id": 6,
+      "user_id": 3,
+      "session_id": "session_2",
+      "role": "assistant",
+      "content": "健身房目前状态为可用，您可以直接前往使用，或者预约特定时间段。",
+      "timestamp": "2024-01-11T15:30:05.000Z"
+    },
+    {
+      "id": 7,
+      "user_id": 4,
+      "session_id": "session_3",
+      "role": "user",
+      "content": "会议室A明天可以预约吗？",
+      "timestamp": "2024-01-12T09:15:00.000Z"
+    },
+    {
+      "id": 8,
+      "user_id": 4,
+      "session_id": "session_3",
+      "role": "assistant",
+      "content": "会议室A明天可以预约，请问您需要什么时间段？",
+      "timestamp": "2024-01-12T09:15:05.000Z"
+    },
+    {
+      "id": 9,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "user",
+      "content": "帮我预约乒乓球室",
+      "timestamp": "2025-10-03T03:20:08.368Z"
+    },
+    {
+      "id": 10,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "您想预约乒乓球室的什么时间？请告诉我具体的时间，比如\"14:00\"或\"下午2点\"。",
+      "timestamp": "2025-10-03T03:20:08.370Z"
+    },
+    {
+      "id": 11,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "user",
+      "content": "14：00",
+      "timestamp": "2025-10-03T03:20:17.177Z"
+    },
+    {
+      "id": 12,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "您好！现在是下午2点，有什么我可以帮您的吗？比如：\n\n- 想查询社区活动安排？\n- 需要预约活动室、健身器材或停车位？\n- 要报修公共设施问题？\n- 咨询养老、育儿等惠民政策？\n\n欢迎告诉我您的需求，我会尽力为您解答！😊",
+      "timestamp": "2025-10-03T03:20:20.542Z"
+    },
+    {
+      "id": 13,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "user",
+      "content": "?????????????????",
+      "timestamp": "2025-10-03T03:27:15.911Z"
+    },
+    {
+      "id": 14,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "您好！看起来您的消息可能没有正常显示。请问您需要咨询或办理什么社区服务事项呢？比如场地预约、政策咨询、报修服务，或者其他便民事务？我会尽力为您提供帮助！",
+      "timestamp": "2025-10-03T03:27:17.460Z"
+    },
+    {
+      "id": 15,
+      "user_id": 1,
+      "session_id": "test_20251003113533",
+      "role": "user",
+      "content": "Hello, please introduce yourself",
+      "timestamp": "2025-10-03T03:35:33.130Z"
+    },
+    {
+      "id": 16,
+      "user_id": 1,
+      "session_id": "test_20251003113533",
+      "role": "assistant",
+      "content": "Hello! I'm the AI assistant for XX Community Service Platform. I'm here to help you with all kinds of community-related matters. \n\nI can assist you with:\n- Answering questions about community services\n- Helping book community facilities like activity rooms or sports courts\n- Providing information about local policies and regulations\n- Assisting with repair requests for your apartment or common areas\n- Sharing useful daily information such as garbage collection schedules, upcoming events, etc.\n\nI'm always ready to serve you with a friendly smile! Whether you're a long-time resident or new to the community, feel free to ask me anything. Let's work together to make our community a better place! \n\nHow can I help you today? 😊",
+      "timestamp": "2025-10-03T03:35:37.101Z"
+    },
+    {
+      "id": 17,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "user",
+      "content": "你好",
+      "timestamp": "2025-10-03T03:50:48.487Z"
+    },
+    {
+      "id": 18,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "您好！欢迎使用XX社区服务平台，我是您的AI助手小和。有什么我可以帮您的吗？😊\n\n无论是想了解社区活动、预约场地，还是需要报修、咨询政策，都可以告诉我哦~",
+      "timestamp": "2025-10-03T03:50:50.480Z"
+    },
+    {
+      "id": 19,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "user",
+      "content": "你好，我想了解一下社区服务",
+      "timestamp": "2025-10-09T04:48:56.538Z"
+    },
+    {
+      "id": 20,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "assistant",
+      "content": "请告诉我您想预约哪个场地？我们有乒乓球室、健身房、会议室A、会议室B和图书阅览室。",
+      "timestamp": "2025-10-09T04:48:56.538Z"
+    },
+    {
+      "id": 21,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "user",
+      "content": "你好，我想了解一下社区服务",
+      "timestamp": "2025-10-09T04:49:08.966Z"
+    },
+    {
+      "id": 22,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "assistant",
+      "content": "请告诉我您想预约哪个场地？我们有乒乓球室、健身房、会议室A、会议室B和图书阅览室。",
+      "timestamp": "2025-10-09T04:49:08.966Z"
+    },
+    {
+      "id": 23,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "user",
+      "content": "你好，我想了解一下社区服务",
+      "timestamp": "2025-10-09T04:49:21.625Z"
+    },
+    {
+      "id": 24,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "assistant",
+      "content": "请告诉我您想预约哪个场地？我们有乒乓球室、健身房、会议室A、会议室B和图书阅览室。",
+      "timestamp": "2025-10-09T04:49:21.625Z"
+    },
+    {
+      "id": 25,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "user",
+      "content": "你好，我想了解一下社区服务",
+      "timestamp": "2025-10-09T04:49:34.046Z"
+    },
+    {
+      "id": 26,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "assistant",
+      "content": "请告诉我您想预约哪个场地？我们有乒乓球室、健身房、会议室A、会议室B和图书阅览室。",
+      "timestamp": "2025-10-09T04:49:34.046Z"
+    },
+    {
+      "id": 27,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "user",
+      "content": "你好，我想了解一下社区服务",
+      "timestamp": "2025-10-09T04:49:46.557Z"
+    },
+    {
+      "id": 28,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "assistant",
+      "content": "请告诉我您想预约哪个场地？我们有乒乓球室、健身房、会议室A、会议室B和图书阅览室。",
+      "timestamp": "2025-10-09T04:49:46.557Z"
+    },
+    {
+      "id": 29,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "user",
+      "content": "你好，我想了解一下社区服务",
+      "timestamp": "2025-10-09T04:49:59.087Z"
+    },
+    {
+      "id": 30,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "assistant",
+      "content": "请告诉我您想预约哪个场地？我们有乒乓球室、健身房、会议室A、会议室B和图书阅览室。",
+      "timestamp": "2025-10-09T04:49:59.087Z"
+    },
+    {
+      "id": 31,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "user",
+      "content": "你好，我想了解一下社区服务",
+      "timestamp": "2025-10-09T04:50:11.602Z"
+    },
+    {
+      "id": 32,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "assistant",
+      "content": "请告诉我您想预约哪个场地？我们有乒乓球室、健身房、会议室A、会议室B和图书阅览室。",
+      "timestamp": "2025-10-09T04:50:11.602Z"
+    },
+    {
+      "id": 33,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "user",
+      "content": "谢谢你的帮助",
+      "timestamp": "2025-10-09T11:11:22.531Z"
+    },
+    {
+      "id": 34,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "assistant",
+      "content": "不客气！很高兴能帮上您～ 如果您以后还有任何社区相关的问题，比如想了解便民服务、预约活动场地，或者需要协助报修、咨询政策，随时都可以来找我哦！祝您在XX社区生活愉快，天天都有好心情！😊",
+      "timestamp": "2025-10-09T11:11:25.398Z"
+    },
+    {
+      "id": 35,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "user",
+      "content": "你好，我想了解一下社区服务",
+      "timestamp": "2025-10-09T11:11:37.992Z"
+    },
+    {
+      "id": 36,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "assistant",
+      "content": "请告诉我您想预约哪个场地？我们有乒乓球室、健身房、会议室A、会议室B和图书阅览室。",
+      "timestamp": "2025-10-09T11:11:37.993Z"
+    },
+    {
+      "id": 37,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "user",
+      "content": "我想预约一个场地",
+      "timestamp": "2025-10-09T11:11:53.453Z"
+    },
+    {
+      "id": 38,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "assistant",
+      "content": "请告诉我您想预约哪个场地？我们有乒乓球室、健身房、会议室A、会议室B和图书阅览室。",
+      "timestamp": "2025-10-09T11:11:53.454Z"
+    },
+    {
+      "id": 39,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "user",
+      "content": "请问有什么活动可以参加吗",
+      "timestamp": "2025-10-09T11:12:08.916Z"
+    },
+    {
+      "id": 40,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "assistant",
+      "content": "📋 社区场地列表：\n\n• 会议室A (可用)\n• 会议室B (可用)\n• 健身房 (可用)\n• 乒乓球室 (可用)\n• 图书阅览室 (可用)\n\n您可以说\"预约乒乓球室\"来预约特定场地。",
+      "timestamp": "2025-10-09T11:12:08.928Z"
+    },
+    {
+      "id": 41,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "user",
+      "content": "谢谢你的帮助",
+      "timestamp": "2025-10-09T11:12:24.370Z"
+    },
+    {
+      "id": 42,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "assistant",
+      "content": "不客气！很高兴能帮上您～ 如果您以后还有任何关于社区服务、设施预约、政策咨询或报修等方面的问题，随时都可以来找我哦！祝您在XX社区生活愉快，天天都有好心情！😊",
+      "timestamp": "2025-10-09T11:12:26.225Z"
+    },
+    {
+      "id": 43,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "user",
+      "content": "你好，请帮助我",
+      "timestamp": "2025-10-09T12:31:05.772Z"
+    },
+    {
+      "id": 44,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "user",
+      "content": "你好，请帮助我",
+      "timestamp": "2025-10-09T12:34:25.735Z"
+    },
+    {
+      "id": 45,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "user",
+      "content": "请问有什么活动可以参加吗",
+      "timestamp": "2025-10-09T12:34:43.279Z"
+    },
+    {
+      "id": 46,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "assistant",
+      "content": "📋 社区场地列表：\n\n• 会议室A (可用)\n• 会议室B (可用)\n• 健身房 (可用)\n• 乒乓球室 (可用)\n• 图书阅览室 (可用)\n\n您可以说\"预约乒乓球室\"来预约特定场地。",
+      "timestamp": "2025-10-09T12:34:43.292Z"
+    },
+    {
+      "id": 47,
+      "user_id": 1,
+      "session_id": "esp32_session",
+      "role": "user",
+      "content": "你好，请帮助我",
+      "timestamp": "2025-10-09T12:44:25.516Z"
+    },
+    {
+      "id": 48,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "user",
+      "content": "你好",
+      "timestamp": "2025-10-21T13:31:04.428Z"
+    },
+    {
+      "id": 49,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "您好！欢迎使用XX社区服务平台，我是您的AI助手小X。有什么我可以帮您的吗？无论是社区活动、场地预约、政策咨询还是报修服务，都可以告诉我哦~ 😊",
+      "timestamp": "2025-10-21T13:31:05.736Z"
+    },
+    {
+      "id": 50,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "user",
+      "content": "我",
+      "timestamp": "2025-10-21T13:31:08.911Z"
+    },
+    {
+      "id": 51,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "您好！欢迎使用XX社区服务平台，我是您的AI助手。有什么我可以帮您的吗？😊\n\n如果您有任何关于社区服务、设施预约、政策咨询、报修或便民信息的需求，都可以告诉我，我会尽力为您提供帮助！",
+      "timestamp": "2025-10-21T13:31:10.327Z"
+    },
+    {
+      "id": 52,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "user",
+      "content": "帮我预约乒乓球室",
+      "timestamp": "2025-10-21T13:35:16.057Z"
+    },
+    {
+      "id": 53,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "您想预约乒乓球室的什么时间？请告诉我具体的时间，比如\"14:00\"或\"下午2点\"。",
+      "timestamp": "2025-10-21T13:35:16.058Z"
+    },
+    {
+      "id": 54,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "user",
+      "content": "14.00",
+      "timestamp": "2025-10-21T13:35:23.175Z"
+    },
+    {
+      "id": 55,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "您好！您提到的“14.00”是指下午2点的时间吗？如果您需要预约社区活动室、健身设施或其他服务，我可以帮您查询可用时段。或者您有其他具体需求，也请告诉我，我将尽力为您提供帮助。",
+      "timestamp": "2025-10-21T13:35:27.798Z"
+    },
+    {
+      "id": 56,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "user",
+      "content": "是的",
+      "timestamp": "2025-10-21T13:35:34.257Z"
+    },
+    {
+      "id": 57,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "您好！欢迎使用XX社区服务平台。有什么我可以帮您的吗？无论是咨询社区服务、预约活动场地，还是需要报修或了解最新政策，我都很乐意为您提供帮助哦！😊",
+      "timestamp": "2025-10-21T13:35:36.032Z"
+    },
+    {
+      "id": 58,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "user",
+      "content": "帮我预约乒乓球室",
+      "timestamp": "2025-10-21T13:57:27.990Z"
+    },
+    {
+      "id": 59,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "您想预约乒乓球室的什么时间？请告诉我具体的时间，比如\"14:00\"或\"下午2点\"。",
+      "timestamp": "2025-10-21T13:57:27.991Z"
+    },
+    {
+      "id": 60,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "user",
+      "content": "上午9点",
+      "timestamp": "2025-10-21T13:57:35.277Z"
+    },
+    {
+      "id": 61,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "您好！现在是上午9点，社区服务中心已经上班啦～  \n请问您今天需要办理什么业务呢？我可以帮您：\n\n- 预约活动场地（如会议室、舞蹈室等）  \n- 咨询养老、育儿、医保等政策  \n- 报修公共设施问题  \n- 查询近期社区活动安排  \n- 办理居住证明、政审盖章等便民服务  \n\n欢迎告诉我您的需求，我会尽力为您解答和协助哦！😊",
+      "timestamp": "2025-10-21T13:57:39.948Z"
+    },
+    {
+      "id": 62,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "user",
+      "content": "我想预约上午9点到10点的乒乓球室",
+      "timestamp": "2025-10-21T13:58:14.028Z"
+    },
+    {
+      "id": 63,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "✅ 预约成功！\n\n场地：乒乓球室\n日期：2025-10-22\n时间：09:00-11:00\n预约编号：8\n\n请按时到达场地，如有变更请提前联系管理员。",
+      "timestamp": "2025-10-21T13:58:14.040Z"
+    },
+    {
+      "id": 64,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "user",
+      "content": "你好",
+      "timestamp": "2026-03-22T15:32:21.987Z"
+    },
+    {
+      "id": 65,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "user",
+      "content": "你好",
+      "timestamp": "2026-03-22T15:36:09.508Z"
+    },
+    {
+      "id": 66,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "user",
+      "content": "你好",
+      "timestamp": "2026-03-22T15:36:53.665Z"
+    },
+    {
+      "id": 67,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "user",
+      "content": "你好",
+      "timestamp": "2026-03-22T15:37:00.032Z"
+    },
+    {
+      "id": 68,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "user",
+      "content": "你好胖",
+      "timestamp": "2026-03-22T15:40:10.496Z"
+    },
+    {
+      "id": 69,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "user",
+      "content": "w",
+      "timestamp": "2026-03-22T15:45:51.194Z"
+    },
+    {
+      "id": 70,
+      "user_id": 1,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "您好！请问您是想咨询社区服务相关的问题吗？比如场地预约、政策咨询、报修服务，还是需要了解便民信息？😊  \n欢迎随时告诉我您的需求，我会尽力为您提供帮助！",
+      "timestamp": "2026-03-22T15:45:52.858Z"
+    },
+    {
+      "id": 71,
+      "user_id": 2,
+      "session_id": "default",
+      "role": "user",
+      "content": "请读取我当前页面看到的前端信息，用分点方式告诉我页面里有哪些重点内容，并给出下一步建议。",
+      "timestamp": "2026-04-01T15:37:23.901Z"
+    },
+    {
+      "id": 72,
+      "user_id": 2,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "好的，已为您读取当前前端页面信息，内容整理如下：\n\n✅ 页面重点内容：\n- 当前页面为“AI助手”服务界面，由温柔社区工作人员在线提供支持；\n- 页面支持语音识别与语音播报功能，方便您便捷操作；\n- 当前用户为“张三”，系统已识别并显示；\n- 页面当前无可见卡片（visibleCardCount: 0），可能尚未加载或暂无推荐内容；\n- 页面显示文字提示：“AI 助手，温柔社区工作人员在线，可语音识别、语音播报、读取当前页面信息”，说明当前功能聚焦于智能交互与信息读取。\n\n📌 下一步建议：\n1. 若您希望获取具体服务（如预约、报修、政策咨询等），可直接语音或文字输入需求，我会为您匹配系统内可执行步骤；\n2. 若想查看“当前页面信息”或“界面内容”，可明确告诉我“请读取当前页面”，我会结构化为您呈现；\n3. 如需操作帮助（如如何预约、如何报修），可直接说“帮我预约XX”或“我想报修XX”，我会引导您完成。\n\n您现在想做什么？我随时为您服务 😊",
+      "timestamp": "2026-04-01T15:37:29.096Z"
+    },
+    {
+      "id": 73,
+      "user_id": 2,
+      "session_id": "default",
+      "role": "user",
+      "content": "请读取我当前页面看到的前端信息，用分点方式告诉我页面里有哪些重点内容，并给出下一步建议。",
+      "timestamp": "2026-04-01T15:46:28.926Z"
+    },
+    {
+      "id": 74,
+      "user_id": 2,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "好的，已为您读取当前前端页面信息，重点内容如下：\n\n✅ 1. 当前页面为“AI内容页”（ai-content），您正在与AI助手互动  \n✅ 2. 您的姓名显示为“张三”，系统已识别用户身份  \n✅ 3. 当前页面未显示任何卡片内容（visibleCardCount: 0），可能尚未加载或暂无待办事项  \n✅ 4. 快捷信息栏显示：  \n  - 通知数量：6条  \n  - 服务数量：5项  \n✅ 5. 页面提示语：“AI 助手，温柔社区工作人员在线，可语音识别、语音播报、读取当前页面信息” —— 您可直接语音提问或要求播报内容\n\n📌 下一步建议：\n\n- 若您想查看通知或服务详情，可点击“通知”或“服务”入口（如页面有对应按钮）  \n- 若想获取某项服务的办理流程或预约方式，可直接告诉我您需要什么服务（如报修、预约活动、政策咨询等）  \n- 若页面未加载内容，可尝试刷新页面或点击“重新加载”按钮  \n- 您也可直接语音说：“帮我读一下当前页面内容”或“我想预约社区活动”，我会为您处理\n\n需要我帮您做什么？随时告诉我 😊",
+      "timestamp": "2026-04-01T15:46:31.960Z"
+    },
+    {
+      "id": 75,
+      "user_id": 2,
+      "session_id": "default",
+      "role": "user",
+      "content": "请基于最近信息，重点说明会议室状态、最近公示和便民服务建议。",
+      "timestamp": "2026-04-01T15:53:41.824Z"
+    },
+    {
+      "id": 76,
+      "user_id": 2,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "会议室A在2026-04-02没有预约记录，全天可用。",
+      "timestamp": "2026-04-01T15:53:41.826Z"
+    },
+    {
+      "id": 77,
+      "user_id": 2,
+      "session_id": "default",
+      "role": "user",
+      "content": "请基于最近信息先做汇报式播报，例如“会议室有空、乒乓球室有空、健身房没空”，再补充最近公示和便民服务建议。\n前端已固定展示场地速报：会议室有空，健身房有空，乒乓球室有空，图书阅览室有空。请不要重复这句，直接补充最近公示、便民服务建议与下一步办理建议。",
+      "timestamp": "2026-04-02T04:40:30.413Z"
+    },
+    {
+      "id": 78,
+      "user_id": 2,
+      "session_id": "default",
+      "role": "assistant",
+      "content": "结论：最新公示含安全提醒、新书到货、春节开放调整等，便民服务推荐代购、快递代收、洗衣。\n依据：系统显示6条最新通知，5项活跃服务中代购/快递代收评分高、维修服务暂不可用。\n下一步：可直接预约空闲场地，或通过“代购”“快递代收”服务下单，报修请选“万师傅”并备注优先级。",
+      "timestamp": "2026-04-02T04:40:31.703Z"
+    }
+  ],
+  "venues": [
+    {
+      "id": 3,
+      "name": "会议室A",
+      "type": "meeting",
+      "capacity": 12,
+      "status": "available",
+      "description": "小型会议室，适合团队讨论",
+      "location": "3楼南侧",
+      "created_at": "2025-10-02T17:23:25.061Z",
+      "updated_at": "2025-10-03T02:43:24.028Z"
+    },
+    {
+      "id": 4,
+      "name": "会议室B",
+      "type": "meeting",
+      "capacity": 8,
+      "status": "available",
+      "description": "中型会议室，配备投影设备",
+      "location": "3楼北侧",
+      "created_at": "2025-10-02T17:23:25.061Z"
+    },
+    {
+      "id": 2,
+      "name": "健身房",
+      "type": "fitness",
+      "capacity": 20,
+      "status": "available",
+      "description": "设备齐全的健身中心",
+      "location": "2楼西侧",
+      "created_at": "2025-10-02T17:23:25.061Z"
+    },
+    {
+      "id": 1,
+      "name": "乒乓球室",
+      "type": "sports",
+      "capacity": 4,
+      "status": "available",
+      "description": "专业乒乓球场地，配备标准球桌",
+      "location": "1楼东侧",
+      "created_at": "2025-10-02T17:23:25.061Z",
+      "updated_at": "2025-10-03T02:43:31.717Z"
+    },
+    {
+      "id": 5,
+      "name": "图书阅览室",
+      "type": "study",
+      "capacity": 30,
+      "status": "available",
+      "description": "安静的学习环境，提供各类书籍",
+      "location": "2楼东侧",
+      "created_at": "2025-10-02T17:23:25.061Z",
+      "updated_at": "2025-10-03T02:33:26.926Z"
+    }
+  ],
+  "reservations": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "venue_id": 1,
+      "date": "2024-01-15",
+      "time_slot": "14:00-16:00",
+      "status": "completed",
+      "purpose": "乒乓球训练",
+      "created_at": "2024-01-10",
+      "updated_at": "2025-10-03T02:33:54.990Z",
+      "notes": ""
+    },
+    {
+      "id": 2,
+      "user_id": 3,
+      "venue_id": 2,
+      "date": "2024-01-16",
+      "time_slot": "19:00-21:00",
+      "status": "confirmed",
+      "purpose": "健身锻炼",
+      "created_at": "2024-01-11",
+      "updated_at": "2026-03-24T09:57:34.530Z",
+      "notes": ""
+    },
+    {
+      "id": 3,
+      "user_id": 4,
+      "venue_id": 3,
+      "date": "2024-01-17",
+      "time_slot": "10:00-12:00",
+      "status": "completed",
+      "purpose": "部门会议",
+      "created_at": "2024-01-12",
+      "updated_at": "2025-10-03T02:34:13.989Z",
+      "notes": ""
+    },
+    {
+      "id": 4,
+      "user_id": 5,
+      "venue_id": 4,
+      "date": "2024-01-18",
+      "time_slot": "15:00-17:00",
+      "status": "completed",
+      "purpose": "项目讨论",
+      "created_at": "2024-01-13",
+      "updated_at": "2025-10-03T02:34:08.484Z",
+      "notes": ""
+    },
+    {
+      "id": 5,
+      "user_id": 6,
+      "venue_id": 5,
+      "date": "2024-01-19",
+      "time_slot": "09:00-11:00",
+      "status": "completed",
+      "purpose": "学习研讨",
+      "created_at": "2024-01-14",
+      "updated_at": "2025-10-03T02:34:10.930Z",
+      "notes": ""
+    },
+    {
+      "id": 6,
+      "user_id": 2,
+      "venue_id": 2,
+      "date": "2024-01-20",
+      "time_slot": "08:00-10:00",
+      "status": "completed",
+      "purpose": "晨练",
+      "created_at": "2024-01-15",
+      "updated_at": "2025-10-03T02:34:06.828Z",
+      "notes": ""
+    },
+    {
+      "id": 7,
+      "user_id": 3,
+      "venue_id": 1,
+      "date": "2024-01-21",
+      "time_slot": "16:00-18:00",
+      "status": "completed",
+      "purpose": "乒乓球比赛",
+      "created_at": "2024-01-16",
+      "updated_at": "2025-10-03T02:34:05.698Z",
+      "notes": ""
+    },
+    {
+      "id": 8,
+      "user_id": 1,
+      "venue_id": 1,
+      "date": "2025-10-22",
+      "time_slot": "09:00-11:00",
+      "status": "approved",
+      "notes": "",
+      "created_at": "2025-10-21T13:58:14.039Z",
+      "updated_at": "2025-10-21T14:01:15.685Z"
+    }
+  ],
+  "devices": [
+    {
+      "id": 1,
+      "name": "空调系统",
+      "type": "hvac",
+      "status": "online",
+      "location": "全楼",
+      "last_maintenance": "2024-01-15",
+      "created_at": "2025-10-02T17:23:25.061Z"
+    },
+    {
+      "id": 2,
+      "name": "照明系统",
+      "type": "lighting",
+      "status": "online",
+      "location": "全楼",
+      "last_maintenance": "2024-01-10",
+      "created_at": "2025-10-02T17:23:25.061Z"
+    },
+    {
+      "id": 3,
+      "name": "监控系统",
+      "type": "security",
+      "status": "online",
+      "location": "全楼",
+      "last_maintenance": "2024-01-20",
+      "created_at": "2025-10-02T17:23:25.061Z"
+    },
+    {
+      "id": 4,
+      "name": "门禁系统",
+      "type": "access",
+      "status": "online",
+      "location": "全楼",
+      "last_maintenance": "2024-01-18",
+      "created_at": "2025-10-02T17:23:25.061Z"
+    },
+    {
+      "id": 5,
+      "name": "消防系统",
+      "type": "fire",
+      "status": "online",
+      "location": "全楼",
+      "last_maintenance": "2024-01-25",
+      "created_at": "2025-10-02T17:23:25.062Z"
+    }
+  ],
+  "repairs": [
+    {
+      "id": 6,
+      "title": "会议室B音响设备故障",
+      "description": "音响有杂音，声音断断续续",
+      "user_id": 6,
+      "venue_id": 4,
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2024-01-13",
+      "updated_at": "2024-01-13"
+    },
+    {
+      "id": 5,
+      "title": "健身房跑步机故障",
+      "description": "3号跑步机无法启动",
+      "user_id": 5,
+      "venue_id": 2,
+      "status": "processing",
+      "priority": "high",
+      "created_at": "2024-01-12",
+      "updated_at": "2024-01-12"
+    },
+    {
+      "id": 4,
+      "title": "图书阅览室空调不制冷",
+      "description": "空调开启后温度不下降",
+      "user_id": 4,
+      "venue_id": 5,
+      "status": "pending",
+      "priority": "medium",
+      "created_at": "2024-01-11",
+      "updated_at": "2024-01-11"
+    },
+    {
+      "id": 1,
+      "title": "乒乓球室照明故障",
+      "description": "灯管闪烁，需要更换",
+      "user_id": 2,
+      "venue_id": 1,
+      "status": "pending",
+      "priority": "high",
+      "created_at": "2024-01-10",
+      "updated_at": "2024-01-10"
+    },
+    {
+      "id": 2,
+      "title": "健身房空调异响",
+      "description": "空调运行时有异常声音",
+      "user_id": 3,
+      "venue_id": 2,
+      "status": "processing",
+      "priority": "medium",
+      "created_at": "2024-01-09",
+      "updated_at": "2024-01-09"
+    },
+    {
+      "id": 3,
+      "title": "会议室投影仪无法开机",
+      "description": "投影仪按电源键无反应",
+      "user_id": 2,
+      "venue_id": 3,
+      "status": "completed",
+      "priority": "low",
+      "created_at": "2024-01-08",
+      "updated_at": "2024-01-08"
+    }
+  ],
+  "notices": [
+    {
+      "id": 6,
+      "title": "社区安全提醒",
+      "content": "近期请注意防火安全，离开场地时请关闭电源",
+      "type": "safety",
+      "status": "published",
+      "author": "admin",
+      "created_at": "2024-01-14",
+      "updated_at": "2024-01-14"
+    },
+    {
+      "id": 5,
+      "title": "图书阅览室新书到货",
+      "content": "图书阅览室新增科技、文学类图书200余册，欢迎借阅",
+      "type": "announcement",
+      "status": "published",
+      "author": "admin",
+      "created_at": "2024-01-13",
+      "updated_at": "2024-01-13"
+    },
+    {
+      "id": 4,
+      "title": "设备维护通知",
+      "content": "本周六将对健身房设备进行维护，请提前安排训练时间",
+      "type": "maintenance",
+      "status": "published",
+      "author": "admin",
+      "created_at": "2024-01-12",
+      "updated_at": "2024-01-12"
+    },
+    {
+      "id": 1,
+      "title": "春节期间场地开放时间调整",
+      "content": "春节假期期间，场地开放时间调整为上午9:00-下午5:00",
+      "type": "announcement",
+      "status": "published",
+      "author": "admin",
+      "created_at": "2024-01-10",
+      "updated_at": "2024-01-10"
+    },
+    {
+      "id": 2,
+      "title": "新增便民服务项目通知",
+      "content": "社区新增快递代收、家政清洁等便民服务",
+      "type": "service",
+      "status": "published",
+      "author": "admin",
+      "created_at": "2024-01-09",
+      "updated_at": "2024-01-09"
+    },
+    {
+      "id": 3,
+      "title": "社区活动报名开始",
+      "content": "春季运动会报名开始，欢迎大家踊跃参与",
+      "type": "activity",
+      "status": "published",
+      "author": "admin",
+      "created_at": "2024-01-08",
+      "updated_at": "2024-01-08"
+    }
+  ],
+  "services": [
+    {
+      "id": 5,
+      "name": "代购服务",
+      "provider": "跑腿小哥",
+      "description": "生活用品代购配送",
+      "rating": 4.7,
+      "status": "active",
+      "created_at": "2024-01-01",
+      "updated_at": "2024-01-01"
+    },
+    {
+      "id": 2,
+      "name": "家政清洁",
+      "provider": "阿姨来了",
+      "description": "专业家政清洁服务",
+      "rating": 4.6,
+      "status": "active",
+      "created_at": "2024-01-01",
+      "updated_at": "2024-01-01"
+    },
+    {
+      "id": 1,
+      "name": "快递代收",
+      "provider": "顺丰快递",
+      "description": "为居民提供快递代收服务",
+      "rating": 4.8,
+      "status": "active",
+      "created_at": "2024-01-01",
+      "updated_at": "2024-01-01"
+    },
+    {
+      "id": 3,
+      "name": "维修服务",
+      "provider": "万师傅",
+      "description": "家电维修、水电维修等",
+      "rating": 4.9,
+      "status": "inactive",
+      "created_at": "2024-01-01",
+      "updated_at": "2024-01-01"
+    },
+    {
+      "id": 4,
+      "name": "洗衣服务",
+      "provider": "洗衣王",
+      "description": "专业洗衣烘干服务",
+      "rating": 4.5,
+      "status": "active",
+      "created_at": "2024-01-01",
+      "updated_at": "2024-01-01"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XX社区服务平台</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <i class="fas fa-home icon-primary"></i>
+                <span>XX社区服务平台</span>
+            </div>
+        </div>
+        <div class="header-center">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="语音/文字搜索服务，例如“预约乒乓球室”" onkeypress="handleSearch(event)">
+                <i class="fas fa-microphone icon-secondary" onclick="startVoiceSearch()"></i>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="user-profile" onclick="showUserCenter()">
+                <i class="fas fa-user-circle"></i>
+                <span class="user-name">用户</span>
+            </div>
+            <div class="notification" onclick="showPolicyQuery()">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">0</span>
+            </div>
+            <div class="chat-notification" onclick="showAIAssistant()">
+                <i class="fas fa-comment"></i>
+                <span class="notification-badge">AI</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="left-panel">
+            <div class="panel-header">
+                <h2>公共资源查询与预约</h2>
+                <p>实时查看状态，快速完成预约</p>
+            </div>
+            <div class="service-sections">
+                <div class="service-item" data-service="场地查询">
+                    <div class="service-icon">
+                        <i class="fas fa-building icon-primary"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>场地查询</h3>
+                        <p class="service-desc">查看场地实时使用情况</p>
+                        <button class="action-btn" data-action="场地查询">立即查看</button>
+                    </div>
+                </div>
+                <div class="service-item" data-service="场地预约">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-alt icon-secondary"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>场地预约</h3>
+                        <p class="service-desc">在线提交预约申请</p>
+                        <button class="action-btn" data-action="场地预约">去预约</button>
+                    </div>
+                </div>
+                <div class="service-item" data-service="公共设施报修">
+                    <div class="service-icon">
+                        <i class="fas fa-exclamation-triangle icon-warning"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>公共设施报修</h3>
+                        <p class="service-desc">填写故障信息并跟踪处理进度</p>
+                        <button class="action-btn repair-btn" data-action="公共设施报修">立即报修</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="right-panel">
+            <div class="panel-header">
+                <h2>社区信息与服务</h2>
+                <p>政策通知、便民服务一键查看</p>
+            </div>
+            <div class="service-sections">
+                <div class="service-item" data-service="政策通知查询">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>政策通知查询</h3>
+                        <p class="service-desc">查看最新公告与通知</p>
+                        <button class="action-btn" data-action="政策通知查询">查看通知</button>
+                    </div>
+                </div>
+                <div class="service-item" data-service="便民服务查询">
+                    <div class="service-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>便民服务查询</h3>
+                        <p class="subtitle">服务列表与评分</p>
+                        <button class="action-btn" data-action="便民服务查询">查看服务</button>
+                    </div>
+                </div>
+                <div class="service-item" data-service="便民网点">
+                    <div class="service-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>便民网点</h3>
+                        <p class="service-desc">查看附近便民网点信息</p>
+                        <button class="action-btn" data-action="便民网点">查看网点</button>
+                    </div>
+                </div>
+                <div class="service-item" data-service="个人中心">
+                    <div class="service-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>个人中心</h3>
+                        <p class="service-desc">查看资料与预约记录</p>
+                        <button class="action-btn" data-action="个人中心">进入</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="ai-assistant" onclick="showAIAssistant()">
+            <div class="ai-icon">
+                <i class="fas fa-robot"></i>
+            </div>
+            <span>AI助手</span>
+        </div>
+        <div class="footer-logo">
+            <div class="logo-text">社区服务</div>
+        </div>
+        <div class="my-reservation" onclick="showUserCenter()">
+            <i class="fas fa-calendar-check"></i>
+            <span>我的预约</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
