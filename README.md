@@ -1,150 +1,164 @@
+![Node.js](https://img.shields.io/badge/Node.js-20.x-green)
+![Express](https://img.shields.io/badge/Express-4.x-blue)
+![SQLite](https://img.shields.io/badge/SQLite-3.x-lightgrey)
+![ESP32](https://img.shields.io/badge/ESP32-MCP-red)
+
 # 社区服务平台
 
-## 项目结构
+一个支持 Web 端管理及 ESP32 硬件语音入口的社区服务管理系统。
 
-```
-社区/
-├── frontend/                 # 前端文件
-│   ├── admin/               # 管理端
-│   │   ├── index.html       # 管理系统主页
-│   │   ├── script.js        # 管理系统脚本
-│   │   └── styles.css       # 管理系统样式
-│   └── user/                # 用户端
-│       ├── index.html       # 用户系统主页
-│       ├── script.js        # 用户系统脚本
-│       └── styles.css       # 用户系统样式
-├── backend/                 # 后端文件
-│   ├── routes/              # API路由
-│   │   ├── ai.js           # AI助手路由
-│   │   ├── device.js       # 设备管理路由
-│   │   ├── reservation.js  # 预约管理路由
-│   │   ├── statistics.js   # 统计数据路由
-│   │   ├── user.js         # 用户管理路由
-│   │   └── venue.js        # 场地管理路由
-│   ├── services/           # 业务服务
-│   │   └── aiService.js    # AI服务
-│   ├── database/           # 数据库相关
-│   │   ├── community.db    # SQLite数据库文件
-│   │   ├── db.js          # 数据库操作
-│   │   └── init.js        # 数据库初始化
-│   ├── config.js          # 配置文件
-│   └── server.js          # 服务器入口
-├── package.json           # 项目依赖配置
-├── package-lock.json      # 依赖锁定文件
-├── env.example           # 环境变量示例
-└── README.md             # 项目说明文档
-```
+## 核心亮点
 
-## 快速开始
+- **软硬结合**：ESP32 基于小智AI开源项目实现语音交互，通过 MCP 协议与本项目后端 API 对接，支持设备端语音预约与查询。
+- **AI 助手**：集成阿里云 DashScope（通义千问），实现自然语言意图识别（预约、查询、取消），自动完成场地匹配与冲突检测。
+- **完整业务闭环**：包含用户端、管理端、预约审核、报修工单、通知公告等社区服务核心流程。
+- **线上真实部署**：完整项目已部署于云 Linux 服务器，提供在线演示。
 
-### 安装依赖
-```bash
-npm install
-```
+## 在线演示
 
-### 启动服务器
-```bash
-npm start
-```
+- 用户端：http://180.76.177.247:3000/auth/login.html?role=user
+- 管理端：http://180.76.177.247:3000/auth/login.html?role=admin
+- 健康检查：http://180.76.177.247:3000/api/health
 
-### 开发模式
-```bash
-npm run dev
-```
+服务器配置：云 Linux 服务器，已配置服务保活。
 
-## 访问地址
+## 功能概览
 
-- 用户端：http://localhost:3000/user/
-- 管理端：http://localhost:3000/admin/
-- API接口：http://localhost:3000/api/
-- 健康检查：http://localhost:3000/api/health
-
-## API接口说明
-
-### AI助手接口
-- `POST /api/ai/chat` - 与AI对话
-- `GET /api/ai/status` - 获取AI服务状态
-- `GET /api/ai/test` - 测试AI连接
-
-### 预约管理接口
-- `POST /api/reservation/create` - 创建预约
-- `GET /api/reservation/user/:userId` - 获取用户预约
-- `GET /api/reservation/venue/:venueId` - 获取场地预约
-
-### 场地管理接口
-- `GET /api/venue/list` - 获取场地列表
-- `GET /api/venue/:id` - 获取场地详情
-- `GET /api/venue/:id/availability` - 查询可用时间
-
-### 设备管理接口
-- `GET /api/device/list` - 获取设备列表
-- `PUT /api/device/:id/status` - 更新设备状态
-
-### 统计接口
-- `GET /api/statistics/overview` - 总体统计
-- `GET /api/statistics/reservations` - 预约统计
-
-**详细API文档**: 查看 `API接口文档.md` 文件
-
-## 项目文档
-- `docs/用户手册.md`：使用方法与常见问题
-- `docs/作品应用场景.md`：应用场景与价值说明
-- `docs/设计理念.md`：交互与架构设计取舍
-- `docs/技术方案.md`：架构、模块、数据流与部署说明
-
-## 功能模块
-
-### 用户端功能
-- AI智能助手对话
-- 场地预约
-- 个人信息管理
-- 预约记录查看
-
-### 管理端功能
-- 用户管理
-- 场地管理
-- 设备监控
-- 预约审核
-- 数据统计
-- 系统日志
+| 模块 | 核心功能 |
+|------|----------|
+| 用户端 | 场地查询/预约、AI 助手对话、报修提交、通知公告、便民服务、个人预约管理 |
+| 管理端 | 场地/预约/用户/报修管理、设备监控、数据统计 |
+| ESP32 硬件端 | 语音唤醒、对话交互，通过 MCP 工具调用后端 API 实现业务控制 |
 
 ## 技术栈
 
-- **前端**：原生 HTML/CSS/JavaScript (已优化)
-- **后端**：Node.js + Express
-- **数据库**：SQLite
-- **AI服务**：阿里云DashScope API
+- 后端：Node.js + Express
+- 前端：原生 HTML/CSS/JavaScript（已优化，总体积减少 54.6%）
+- AI 服务：阿里云 DashScope API
+- 数据库：SQLite（文件化持久化）
+- 硬件方案：基于小智AI开源项目的 ESP32 固件，扩展自定义 MCP 工具集
 
-## 开发说明
+## 系统架构与硬件接入
 
-项目已重构为前后端分离的架构并完成代码优化：
-- `frontend/` 目录包含所有前端文件
-- `backend/` 目录包含所有后端文件
-- 静态文件通过Express服务器提供服务
-- API接口统一使用 `/api/` 前缀
+本项目核心在于打通语音硬件与业务系统的闭环。
 
-## 性能优化
+**1. 语音入口**：ESP32 设备烧录小智AI固件，提供语音唤醒、ASR（语音识别）、LLM（大模型对话）和 TTS（语音合成）能力。
 
-### 优化成果
-- **总体文件大小**: 217.3KB → 98.7KB (**减少54.6%**)
-- **JavaScript代码**: 大幅精简和优化
-- **CSS样式**: 保留核心功能，删除冗余
-- **删除冗余文件**: 12个不必要的文件
-- **代码质量**: 移除调试代码，优化函数结构
+**2. 控制桥梁**：利用小智AI原生支持的 MCP（Model Context Protocol）协议，将语音指令解析为 `tools/call` 调用。
 
-### 具体优化
-- ✅ 移除jQuery依赖，使用原生JavaScript
-- ✅ 简化重复的功能函数，使用箭头函数
-- ✅ 精简CSS样式，移除未使用的定义
-- ✅ 清理重复代码和多余注释
-- ✅ 移除所有console.log调试代码
-- ✅ 删除重复和冗余文件
-- ✅ 优化代码结构和可维护性
-- ✅ 改进响应式设计
+**3. 业务落地**：本项目作为 MCP 服务端，实现工具与后端 API 的映射：
+   - `reservation.create` → `POST /api/reservation/create`（创建预约）
+   - `device.query` → `GET /api/device/list`（查询设备）
+   - `repair.create` → `POST /api/repair/create`（提交报修）
 
-### 用户体验改进
-- ✅ **页面内跳转** - 摒弃模态框，采用页面内容切换
-- ✅ **直观导航** - 点击服务项目直接跳转到对应功能
-- ✅ **返回按钮** - 每个功能页面都有返回主页按钮
-- ✅ **完整流程** - 场地预约、AI助手等功能完整可用
-- ✅ **实时交互** - 表单验证、数据加载、状态更新
+**硬件接入方案**：为 ESP32 烧录小智AI固件 → 配置本项目 API 网关地址 → 语音指令即可驱动社区业务。
+
+## 项目结构
+community-service-platform-withesp32/
+├── frontend/ # 前端文件
+│ ├── admin/ # 管理端
+│ └── user/ # 用户端
+├── backend/ # 后端文件
+│ ├── routes/ # API路由
+│ ├── services/ # 业务服务
+│ └── database/ # 数据库相关
+├── docs/ # 项目文档
+├── mcp-communtiy/ # MCP协议相关
+├── package.json
+├── env.example
+└── README.md
+
+## 快速开始（本地运行）
+
+**前提条件**：Node.js (v16+) 和 npm。
+
+```bash
+# 1. 克隆项目
+git clone https://github.com/p0358-dot/community-service-platform-withesp32.git
+cd community-service-platform-withesp32
+
+# 2. 安装依赖
+npm install
+
+# 3. 配置环境变量
+cp env.example .env
+# 编辑 .env 文件，填入你的 DASHSCOPE_API_KEY
+
+# 4. 启动服务
+npm start
+
+# 开发模式（自动重启）
+npm run dev
+本地访问地址：
+
+用户端：http://localhost:3000/user/
+
+管理端：http://localhost:3000/admin/
+
+API接口：http://localhost:3000/api/
+
+健康检查：http://localhost:3000/api/health
+
+API接口说明
+AI助手接口
+POST /api/ai/chat - 与AI对话
+
+GET /api/ai/status - 获取AI服务状态
+
+GET /api/ai/test - 测试AI连接
+
+预约管理接口
+POST /api/reservation/create - 创建预约
+
+GET /api/reservation/user/:userId - 获取用户预约
+
+GET /api/reservation/venue/:venueId - 获取场地预约
+
+场地管理接口
+GET /api/venue/list - 获取场地列表
+
+GET /api/venue/:id - 获取场地详情
+
+GET /api/venue/:id/availability - 查询可用时间
+
+设备管理接口
+GET /api/device/list - 获取设备列表
+
+PUT /api/device/:id/status - 更新设备状态
+
+详细API文档请查看 API接口文档.md 文件。
+
+性能优化成果
+文件总体积：217.3KB → 98.7KB（减少 54.6%）
+
+代码重构：移除 jQuery 依赖，采用原生 JavaScript
+
+用户体验：页面内切换、返回导航、实时表单验证
+
+项目文档
+docs/用户手册.md：使用方法与常见问题
+
+docs/技术方案.md：架构、模块与数据流
+
+docs/设计理念.md：交互与架构设计取舍
+
+docs/作品应用场景.md：应用场景与价值说明
+
+开发说明
+项目采用前后端分离架构：
+
+frontend/ 目录包含所有前端文件
+
+backend/ 目录包含所有后端文件
+
+静态文件通过 Express 服务器提供服务
+
+API 接口统一使用 /api/ 前缀
+
+开源协议
+MIT License
+
+致谢
+    语音硬件方案基于 小智AI (xiaozhi-esp32) 开源项目(https://github.com/78/xiaozhi-esp32)
+
+    AI 能力由阿里云 DashScope 提供
